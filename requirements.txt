@@ -9,4 +9,4 @@ soundfile==0.12.1
 noisereduce==3.0.0
 librosa==0.10.1
 tensorflow==2.15.0
-st_audiorec
+streamlit-audiorec==0.1.3
