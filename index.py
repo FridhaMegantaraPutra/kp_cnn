@@ -9,7 +9,7 @@ from st_audiorec import st_audiorec
 import io
 
 # Load the saved model
-model = load_model('audio_classification_model.h5')
+model = load_model('klasifikasi_makhrojul_huruf.h5')
 
 # Define the target shape for input spectrograms
 target_shape = (128, 128)
