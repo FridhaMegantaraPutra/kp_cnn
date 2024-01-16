@@ -9,7 +9,7 @@ from st_audiorec import st_audiorec
 import io
 
 # Load the saved model
-model = load_model('klasifikasi_makhrojul_huruf.h5')
+model = load_model('gabung.h5')
 
 # Define the target shape for input spectrograms
 target_shape = (128, 128)
@@ -50,8 +50,30 @@ st.sidebar.title('MENU')
 page = st.sidebar.radio(
     'Go to', ['Tes Ketepatan', 'makhrojul huruf', 'penggunaan aplikasi'])
 
+
+# Guide page
+if page == 'makhrojul huruf':
+    st.subheader('cara untuk melafalkan huruf hijaiyah  ١  dan ع')
+
+    st.image('1.jpg', caption='gambar makhrojul huruf', use_column_width=True)
+
+    st.write('Dari pangkal tenggorokan untuk huruf أ dan ه')
+    st.write('Dari tengah tenggang untuk huruf ح, ع')
+
+
+elif page == 'penggunaan aplikasi':
+    st.subheader('panduan penggunaan')
+
+    st.write('selamat datang di aplikasi pendeteksi ketepatan makhrojul huruf')
+
+    st.write('1. klik tombol record')
+    st.write('2. apabilah sudah selesai melafadzkan langsung klik stop audio juka bisa di donwload dan di reset')
+    st.write('3. tunggu hingga probabilitas prediksi muncul')
+    st.write(
+        '4. pengucapan huruf menggunakan kasro,doma,fatha,kasrotain,dhomatain,fathatain')
+
 # Home page
-if page == 'Tes Ketepatan':
+elif page == 'Tes Ketepatan':
     # Record audio
     wav_audio_data = st_audiorec()
 
@@ -73,24 +95,3 @@ if page == 'Tes Ketepatan':
         accuracy = class_probabilities[predicted_class_index]
         st.subheader(f'The audio is classified as: {predicted_class}')
         st.subheader(f'Accuracy: {accuracy:.4f}')
-
-# Guide page
-elif page == 'makhrojul huruf':
-    st.subheader('cara untuk melafalkan huruf hijaiyah  ١  dan ع')
-
-    st.image('1.jpg', caption='gambar makhrojul huruf', use_column_width=True)
-
-    st.write('Dari pangkal tenggorokan untuk huruf أ dan ه')
-    st.write('Dari tengah tenggang untuk huruf ح, ع')
-
-
-elif page == 'penggunaan aplikasi':
-    st.subheader('panduan penggunaan')
-
-    st.write('selamat datang di aplikasi pendeteksi ketepatan makhrojul huruf')
-
-    st.write('1. klik tombol record')
-    st.write('2. apabilah sudah selesai melafadzkan langsung klik stop audio juka bisa di donwload dan di reset')
-    st.write('3. tunggu hingga probabilitas prediksi muncul')
-    st.write(
-        '4. pengucapan huruf menggunakan kasro,doma,fatha,kasrotain,dhomatain,fathatain')
