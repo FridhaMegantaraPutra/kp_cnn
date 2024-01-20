@@ -48,7 +48,7 @@ st.title('Tes Ketepatan Makhrojul huruf')
 # Sidebar for navigation
 st.sidebar.title('MENU')
 page = st.sidebar.radio(
-    'Go to', ['makhrojul huruf', 'penggunaan aplikasi,Tes Ketepatan' ])
+    'Go to', ['makhrojul huruf', 'penggunaan aplikasi','Tes Ketepatan' ])
 
 
 # Guide page
