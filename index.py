@@ -8,6 +8,11 @@ from tensorflow.image import resize
 from st_audiorec import st_audiorec
 import io
 
+# local library
+
+import info
+from info import makharijul_huruf_info
+
 # Load the saved model
 model = load_model('all.h5')
 
@@ -56,12 +61,11 @@ page = st.sidebar.radio(
 
 # Guide page
 if page == 'makhrojul huruf':
-    st.subheader('cara untuk melafalkan huruf hijaiyah  ١  dan ع')
 
     st.image('1.jpg', caption='gambar makhrojul huruf', use_column_width=True)
 
-    st.write('Dari pangkal tenggorokan untuk huruf أ dan ه')
-    st.write('Dari tengah tenggang untuk huruf ح, ع')
+    if __name__ == '__main__':
+        makharijul_huruf_info()
 
 
 elif page == 'penggunaan aplikasi':
