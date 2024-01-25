@@ -17,7 +17,8 @@ target_shape = (128, 128)
 # Define your class labels
 
 
-classes = ['ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و', 'ي']
+classes = ['ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش',
+           'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و', 'ي']
 
 # Function to preprocess and classify an audio file
 
@@ -50,7 +51,7 @@ st.title('Tes Ketepatan Makhrojul huruf')
 # Sidebar for navigation
 st.sidebar.title('MENU')
 page = st.sidebar.radio(
-    'Go to', ['makhrojul huruf', 'penggunaan aplikasi','Tes Ketepatan' ])
+    'Go to', ['makhrojul huruf', 'penggunaan aplikasi', 'Tes Ketepatan'])
 
 
 # Guide page
