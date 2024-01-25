@@ -9,13 +9,15 @@ from st_audiorec import st_audiorec
 import io
 
 # Load the saved model
-model = load_model('gabung.h5')
+model = load_model('all.h5')
 
 # Define the target shape for input spectrograms
 target_shape = (128, 128)
 
 # Define your class labels
-classes = ['١', 'ع']
+
+
+classes = ['ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'ه', 'و', 'ي']
 
 # Function to preprocess and classify an audio file
 
